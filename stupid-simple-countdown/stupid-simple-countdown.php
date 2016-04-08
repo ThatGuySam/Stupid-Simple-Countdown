@@ -15,7 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:       Stupid Simple Countdown
  * Plugin URI:        http://sam.lc/ssc
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Description:       A simple plugin that adds a [countdown] shortcode and let's you type the date in plain english.
  * Version:           1.0.0
  * Author:            Sam Carlton
  * Author URI:        http://samcarlton.com/
