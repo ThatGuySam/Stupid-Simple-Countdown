@@ -16,9 +16,18 @@ This plugin leverages PHP’s [strtotime()](http://php.net/manual/en/function.st
 
 For example:
 
-`[countdown until=“Next Sunday 9am”]`
+
 
 This will automatically countdown to the next Sunday at 9am
+
+Here are other examples that work as well
+
+`[countdown until=“Next Sunday 9am”]`
+`[countdown until=“31 December 2999”]`
+`[countdown until=“+1 day”]`
+`[countdown until=“+1 week 2 days 4 hours 2 seconds”]`
+`[countdown until=“next Thursday”]`
+`[countdown until=“6pm”]`
 
 == Installation ==
 
