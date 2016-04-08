@@ -24,7 +24,8 @@ This will automatically countdown to the next Sunday at 9am
 
 1. Upload `stupid-simple-countdown.php` to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Place `<?php do_action('plugin_name_hook'); ?>` in your templates
+1. Place shortcode into a Page or Post(ex: [countdown until=“Next Sunday 9am”])
+1. For Developers: Place `<?php do_action('plugin_name_hook'); ?>` in your templates
 
 == Frequently Asked Questions ==
 
