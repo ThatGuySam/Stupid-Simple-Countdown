@@ -69,7 +69,7 @@ class Stupid_Simple_Countdown {
 	public function __construct() {
 
 		$this->plugin_name = 'stupid-simple-countdown';
-		$this->version = '1.0.0';
+		$this->version = '0.1.0';
 
 		$this->load_dependencies();
 		$this->set_locale();
