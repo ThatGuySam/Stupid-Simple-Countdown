@@ -30,8 +30,8 @@
 				'class' => false,
 				'to' => false,
 				'link' => false,//TODO
-				'complete' => false,//TODO
-				'complete-link' => false,//TODO
+				'finish' => false,//TODO
+				'finish-link' => false,//TODO
 			), $atts, 'countdown' ) );
 			
 				$to = '25 December 2016';
@@ -41,7 +41,7 @@
 			
 			ob_start();
 			?>
-				<span class="countdown" data-to="<?php echo $to_js_formatted; ?>" >date:</span>
+				<span class="ssc-countdown" data-to="<?php echo $to_js_formatted; ?>" data-finish="<?php echo $finish; ?>" ></span>
 			<?php
 			$content = ob_get_clean();
 				
@@ -93,13 +93,23 @@
 					(function( $ ) {
 						'use strict';
 						
-						$('.countdown').each( function(){
+						$('.ssc-countdown').each( function(){
 							
 							var $countdown_el = $(this);
-				
-							var to = $countdown_el.data("to");
 							
-							var completeMessage = 'Live Now';
+							//Get data attributes
+							var dataAttributes = $countdown_el.data();
+				
+							var to = dataAttributes['to'];
+							
+							//Check for finish message and leave default if not defined
+							var finishMessage = (typeof dataAttributes['finish'] === 'undefined') ? '' : dataAttributes['finish'];
+							
+							console.log( finishMessage );
+							
+							//var finishMessage = 'Live Now';
+							
+							//var x = (typeof x === 'undefined') ? def_val : x;
 							
 							$countdown_el.countdown( to )
 								.on('update.countdown', function(event) {
@@ -138,7 +148,7 @@
 									
 									console.log( "Countdown finished" );
 									
-									var $this = $countdown_el.html( '<span class="live">'+completeMessage+'<span class="live">' );
+									var $this = $countdown_el.html( '<span class="live">'+finishMessage+'<span class="live">' );
 									
 								});
 						
