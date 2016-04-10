@@ -104,7 +104,7 @@
 							$countdown_el.countdown( to )
 								.on('update.countdown', function(event) {
 									
-									//Unites to dislpay
+									//Units to dislpay
 									//[ shorthand, unit, displayUnit ]
 									var timeUnits = [
 										['Y','year','yr'],
