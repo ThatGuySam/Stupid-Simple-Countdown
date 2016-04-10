@@ -104,7 +104,11 @@
 							$countdown_el.countdown( to )
 								.on('update.countdown', function(event) {
 									
+									//Unites to dislpay
+									//[ shorthand, unit, displayUnit ]
 									var timeUnits = [
+										['Y','year','yr'],
+										['m','month','mon'],
 										['d','day','day'],
 										['H','hour','hr'],
 										['M','minute','min'],
@@ -114,12 +118,13 @@
 									
 									for (var i=0; i < timeUnits.length; ++i) {//Add timeUnits if they aren't 0
 										
-										var shorthand =	timeUnits[i][2];
-										var unit =		timeUnits[i][1];
-										var u =			timeUnits[i][0];
+										var shorthand =		timeUnits[i][2];
+										var unit =			timeUnits[i][1];
+										var displayUnit =	timeUnits[i][0];
 										
+										//hilios.github.io/jQuery.countdown/documentation.html#event-object
 										if( event.offset[(unit+"s")] ){
-											count_text += '<span>%-'+u+'</span> <small>'+shorthand+'%!'+u+'</small> ';
+											count_text += '<span>%-'+displayUnit+'</span> <small>'+shorthand+'%!'+displayUnit+'</small> ';
 										}
 											
 									}
