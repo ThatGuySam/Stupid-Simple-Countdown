@@ -71,5 +71,7 @@ function run_stupid_simple_countdown() {
 	$plugin = new Stupid_Simple_Countdown();
 	$plugin->run();
 
+	
+
 }
 run_stupid_simple_countdown();

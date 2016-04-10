@@ -95,9 +95,17 @@ class Stupid_Simple_Countdown_Public {
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
-
+		
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/stupid-simple-countdown-public.js', array( 'jquery' ), $this->version, false );
-
+		
 	}
 
 }
+
+/*
+	
+	Countdown Shortcode
+	
+*/
+
+require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/countdown.php';
